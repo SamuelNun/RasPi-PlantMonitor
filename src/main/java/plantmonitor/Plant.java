@@ -2,20 +2,24 @@
 package plantmonitor;
 
 public class Plant {
+    private int plantNum;
     private String name;
     private float minTemp;
     private float maxTemp;
     private float minHumidity;
     private float maxHumidity;
-    private float minSoilMoisture;
-    private float maxSoilMoisture;
-    private float currentSoilMoisture;
+    private int minSoilMoisture;
+    private int maxSoilMoisture;
     
-    public Plant(String name, float minTemp, 
+    private int channel;
+    
+    ////////////////// PLANT CONSTRUCTOR //////////////////
+    public Plant(int plantNum,String name, float minTemp, 
             float maxTemp, float minHumidity, 
-            float maxHumidity, float minSoilMoisture, 
-            float maxSoilMoisture, float initialSoilMoisture) {
+            float maxHumidity, int minSoilMoisture, 
+            int maxSoilMoisture) {
         
+        this.plantNum = plantNum;
         this.name = name;
         this.minTemp = minTemp;
         this.maxTemp = maxTemp;
@@ -23,8 +27,13 @@ public class Plant {
         this.maxHumidity = maxHumidity;
         this.minSoilMoisture = minSoilMoisture;
         this.maxSoilMoisture = maxSoilMoisture;
-        this.currentSoilMoisture = initialSoilMoisture;
+        this.channel = plantNum - 1;
         
+    }
+    
+    ///////////////////////// METHODS TO GET DATA FROM CLASS ////////////////////
+    public int getPlantNum() {
+        return plantNum;
     }
     
     public String getName() {
@@ -47,19 +56,16 @@ public class Plant {
         return maxHumidity;
     }
 
-    public float getMinSoilMoisture() {
+    public int getMinSoilMoisture() {
         return minSoilMoisture;
     }
 
-    public float getMaxSoilMoisture() {
+    public int getMaxSoilMoisture() {
         return maxSoilMoisture;
     }
-
-    public float getCurrentSoilMoisture() {
-        return currentSoilMoisture;
+    
+    public int getChannel() {
+        return channel;
     }
-
-    public void setCurrentSoilMoisture(float moisture) {
-        this.currentSoilMoisture = moisture;
-    }
+    
 }

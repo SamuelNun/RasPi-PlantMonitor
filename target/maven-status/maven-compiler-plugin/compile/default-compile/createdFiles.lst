@@ -1,5 +1,10 @@
-samuelnunez\plantmonitor\DashboardPanel$1.class
-samuelnunez\plantmonitor\Plantmonitor.class
-samuelnunez\plantmonitor\Plant.class
-samuelnunez\plantmonitor\DashboardPanel.class
-samuelnunez\plantmonitor\Sensors.class
+plantmonitor\sensors\SoilMoistureSensor.class
+plantmonitor\AccessCSV.class
+plantmonitor\PlantDetailPanel.class
+plantmonitor\PlantCreationPanel.class
+plantmonitor\DashboardPanel$2.class
+plantmonitor\DashboardPanel.class
+plantmonitor\App.class
+plantmonitor\Plant.class
+plantmonitor\sensors\BME280Sensor.class
+plantmonitor\DashboardPanel$1.class

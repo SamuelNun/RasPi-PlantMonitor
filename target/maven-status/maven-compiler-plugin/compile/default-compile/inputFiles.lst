@@ -1,4 +1,8 @@
-C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\samuelnunez\plantmonitor\DashboardPanel.java
-C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\samuelnunez\plantmonitor\Plant.java
-C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\samuelnunez\plantmonitor\Plantmonitor.java
-C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\samuelnunez\plantmonitor\Sensors.java
+C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\AccessCSV.java
+C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\App.java
+C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\DashboardPanel.java
+C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\Plant.java
+C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\PlantCreationPanel.java
+C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\PlantDetailPanel.java
+C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\sensors\BME280Sensor.java
+C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\sensors\SoilMoistureSensor.java
