@@ -1,38 +1,53 @@
 package plantmonitor.sensors;
 
-import com.pi4j.io.spi.Spi;
-import com.pi4j.io.spi.SpiChipSelect;
-import com.pi4j.context.Context;
-import com.pi4j.Pi4J;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 
 public class SoilMoistureSensor {
-    private final Spi spi;
 
+    private final String scriptPath;
+
+    /**
+     * Default constructor assuming the script is named "read_soil_channel.py"
+     * and located in the project root directory.
+     */
     public SoilMoistureSensor() {
-        Context pi4j = Pi4J.newAutoContext();
-        spi = pi4j.create(Spi.newConfigBuilder(pi4j)
-                .id("MCP3008")
-                .bus(0)
-                .chipSelect(SpiChipSelect.CS_0)
-                .build());
+        this("scripts/read_SoilMoisture.py");
     }
 
+    /**
+     * Custom constructor that allows you to specify a path to the Python script.
+     * @param scriptPath the path to the Python script used to read the MCP3008
+     */
+    public SoilMoistureSensor(String scriptPath) {
+        this.scriptPath = scriptPath;
+    }
+
+    /**
+     * Reads the soil moisture value from the given MCP3008 channel (0–7).
+     * @param channel the MCP3008 channel number
+     * @return an integer between 0–1023 representing analog sensor reading
+     */
     public int readChannel(int channel) {
-        // MCP3008 communication logic
-        if (channel < 0 || channel > 7) throw new IllegalArgumentException("Invalid channel");
+        if (channel < 0 || channel > 7) {
+            throw new IllegalArgumentException("Channel must be between 0 and 7");
+        }
 
-        byte[] txBuffer = new byte[3];
-        txBuffer[0] = 0b00000001; // Start bit
-        txBuffer[1] = (byte)((8 + channel) << 4); // Single-ended + channel number
-        txBuffer[2] = 0;
+        try {
+            ProcessBuilder pb = new ProcessBuilder("python3", scriptPath, String.valueOf(channel));
+            Process process = pb.start();
 
-        byte[] rxBuffer = new byte[3]; // Will store the response
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String output = reader.readLine();
 
-        spi.transfer(txBuffer, rxBuffer, 3); // Send request, receive response
+            if (output != null) {
+                return Integer.parseInt(output.trim());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        int result = ((rxBuffer[1] & 0b00000011) << 8) | (rxBuffer[2] & 0xFF);
-        return result;
+        return -1; // Indicates failure
     }
-
-    
 }
