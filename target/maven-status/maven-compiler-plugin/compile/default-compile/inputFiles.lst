@@ -1,8 +1,8 @@
-C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\AccessCSV.java
-C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\App.java
-C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\DashboardPanel.java
-C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\Plant.java
-C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\PlantCreationPanel.java
-C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\PlantDetailPanel.java
-C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\sensors\BME280Sensor.java
-C:\Users\samue\OneDrive\Documents\NetBeansProjects\plantmonitor\src\main\java\plantmonitor\sensors\SoilMoistureSensor.java
+/home/ikearat/NetBeansProjects/PlantManagementSystem/src/main/java/plantmonitor/AccessCSV.java
+/home/ikearat/NetBeansProjects/PlantManagementSystem/src/main/java/plantmonitor/App.java
+/home/ikearat/NetBeansProjects/PlantManagementSystem/src/main/java/plantmonitor/DashboardPanel.java
+/home/ikearat/NetBeansProjects/PlantManagementSystem/src/main/java/plantmonitor/Plant.java
+/home/ikearat/NetBeansProjects/PlantManagementSystem/src/main/java/plantmonitor/PlantCreationPanel.java
+/home/ikearat/NetBeansProjects/PlantManagementSystem/src/main/java/plantmonitor/PlantDetailPanel.java
+/home/ikearat/NetBeansProjects/PlantManagementSystem/src/main/java/plantmonitor/sensors/BME280Sensor.java
+/home/ikearat/NetBeansProjects/PlantManagementSystem/src/main/java/plantmonitor/sensors/SoilMoistureSensor.java

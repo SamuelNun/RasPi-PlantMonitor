@@ -143,7 +143,7 @@ public class DashboardPanel extends JPanel {
         /////////////////// UPDATES TEMPERATURE AND HUMIDITY ///////////////////
         tempLabel.setText(String.format("Temp: %.1f°F", temp));
         humidLabel.setText(String.format("Humidity: %.1f%%", humid));
-        
+       
         /////////////////// UPDATES TIME ///////////////////
         String currentTime = java.time.LocalTime.now().withSecond(0).withNano(0).toString();
         timeLabel.setText("Time: " + currentTime);
