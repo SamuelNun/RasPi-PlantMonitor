@@ -1,0 +1,4 @@
+PlantNum,PlantName,MinTemp,MaxTemp,MinHumidity,MaxHumidity,MinMoisture,MaxMoisture
+1,Basil,64.4,86.0,50.0,80.0,300,800
+2,Cilantro,50.0,80.6,40.0,70.0,250,750
+3,Chocolate Mint,59.0,82.4,60.0,90.0,350,850
